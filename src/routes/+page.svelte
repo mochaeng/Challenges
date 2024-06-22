@@ -1,3 +1,29 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Fronted Challenges</h1>
+
+<p class="">
+	A collection of some fronted challenges I solved on <a href="https://icodethis.com/">iCodeThis</a>
+</p>
+
+Begginers problem:
+
+<ul>
+	<li>
+		Basics
+		<a></a>
+	</li>
+	<li>
+		Basics
+		<a></a>
+	</li>
+</ul>
+
+<style>
+	.container {
+		justify-content: center;
+		padding: 1em;
+	}
+
+	ul {
+		list-style: none;
+	}
+</style>

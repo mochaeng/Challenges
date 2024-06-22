@@ -46,9 +46,8 @@
 	}
 
 	.container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		margin-top: 1em;
+		margin-left: 1em;
 	}
 
 	button {
@@ -79,7 +78,8 @@
 		padding: 0.4rem;
 		border-radius: 5%;
 		box-shadow: 0px 5px 5px rgba(0, 0, 255, 0.2);
-		margin-bottom: 0.4rem;
+		margin-top: 2em;
+		margin-bottom: 1em;
 	}
 
 	.bold {
