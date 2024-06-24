@@ -29,9 +29,17 @@
 		border-radius: 0.1rem;
 
 		img {
-			width: 100%;
-			height: 100%;
+			flex: 1;
+			height: 50%;
 			object-fit: cover;
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			margin-top: 0.5rem;
+			border: none;
+			padding: 0.5rem;
 		}
 	}
 
@@ -44,12 +52,6 @@
 	.container:active {
 		transform: translate(0);
 		box-shadow: none;
-	}
-
-	.info {
-		margin-top: 0.5rem;
-		border: none;
-		padding: 0.5rem;
 	}
 
 	.title {
