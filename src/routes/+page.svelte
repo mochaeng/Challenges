@@ -1,38 +1,62 @@
 <script lang="ts">
-	import wallpaper from '$lib/assets/wallpapers/chae.webp';
+	import { Challenges } from '$lib/data';
 
-	const challenges = [
-		{ name: 'Basics', path: '/begginers/basics' },
-		{ name: 'Error Page', path: '/begginers/error-page' }
-	];
+	import ProjectCard from '$lib/components/ChallengeCard.svelte';
+
+	console.log(Challenges.getItems());
 </script>
 
-<h1>Fronted Challenges</h1>
+<section>
+	<h1>Fronted Challenges</h1>
 
-<p class="">
-	A collection of some fronted challenges I solved on <a
-		href="https://icodethis.com/"
-		target="_blank">iCodeThis</a
-	>
-</p>
+	<p>
+		A collection of some fronted challenges I solved on <a
+			href="https://icodethis.com/"
+			target="_blank">iCodeThis</a
+		>
+	</p>
 
-Begginers problem:
-
-<ul>
-	{#each challenges as challenge}
-		<li>
-			<a href={challenge['path']}>{challenge['name']}</a>
-		</li>
-	{/each}
-</ul>
-
-<img
-	src={wallpaper}
-	alt="Chaeyoung from TWICE making a silence gesture to show she is the queen"
-	width="600px"
-/>
+	<div class="cards">
+		<ul>
+			{#each Challenges.getItems() as challenge}
+				<li>
+					<a href={challenge.url}>
+						<ProjectCard
+							title={challenge.title}
+							description={challenge.description}
+							image={challenge.image}
+						/>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
+</section>
 
 <style>
+	section {
+		padding-top: 2rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h1 ~ p {
+		max-width: 450px;
+		font-size: large;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.cards > ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
 	ul {
 		list-style: none;
 	}
