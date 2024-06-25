@@ -18,6 +18,12 @@ let items: ProjectCardItem[] = [
 		description: 'A custom 404 page',
 		url: '/easy/error-page',
 		image: { src: path + '2.webp', alt: 'A print from the project' }
+	},
+	{
+		title: 'Error Page',
+		description: 'A custom 404 page',
+		url: '/easy/error-page',
+		image: { src: path + '2.webp', alt: 'A print from the project' }
 	}
 ];
 

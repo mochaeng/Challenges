@@ -34,6 +34,7 @@
 		"@fontsource-variable/grandstander": "^5.0.21",
 		"@fontsource-variable/inter": "^5.0.18",
 		"@fontsource-variable/roboto-mono": "^5.0.19",
-		"@fontsource/rampart-one": "^5.0.19"
+		"@fontsource/rampart-one": "^5.0.19",
+		"lucide-svelte": "^0.396.0"
 	}
 }

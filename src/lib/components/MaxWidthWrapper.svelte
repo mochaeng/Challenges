@@ -18,7 +18,7 @@
 		margin-right: auto;
 		height: 100%;
 		width: 100%;
-		max-width: 1280px;
+		max-width: var(--app-width-wrapper);
 
 		padding-left: 1rem;
 		padding-right: 1rem;

@@ -6,11 +6,22 @@
 	import '@fontsource-variable/roboto-mono';
 
 	let { children } = $props();
+	let resizeTimer: any;
+
+	$effect(() => {
+		window.addEventListener('resize', () => {
+			document.body.classList.add('resize-animation-stopper');
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(() => {
+				document.body.classList.remove('resize-animation-stopper');
+			}, 400);
+		});
+	});
 </script>
 
 <Navbar />
 
-<div>
+<div class="content-wrapper">
 	<MaxWidthWrapper>
 		{@render children()}
 	</MaxWidthWrapper>
@@ -18,6 +29,7 @@
 
 <style>
 	:root {
+		--app-width-wrapper: 1280px;
 		--bg-fuchsia: rgb(253 244 255);
 		--bg-slate-50: rgb(248 250 252);
 		--bg-rose-50: rgb(255 241 242);
@@ -30,6 +42,7 @@
 	:global(body) {
 		font-family: 'Roboto Mono Variable', monospace;
 		min-height: 100vh;
+		overflow-x: hidden;
 	}
 
 	:global(ul) {
@@ -47,9 +60,24 @@
 		box-sizing: border-box;
 	}
 
-	div {
+	.resize-animation-stopper * {
+		animation: none !important;
+		transition: none !important;
+	}
+
+	.content-wrapper {
 		background-color: var(--bg-rose-50);
 		padding-top: 4rem;
 		min-height: 100vh;
+		padding-bottom: 10rem;
+	}
+
+	.navigation-wrapper {
+		/* padding-top: 10rem; */
+		height: 4rem;
+		border-bottom: 0.13rem solid var(--bg-stone-900);
+		background-color: rgba(255, 255, 255, 0.85);
+		backdrop-filter: blur(1rem);
+		/* background-color: black; */
 	}
 </style>
