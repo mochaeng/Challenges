@@ -6,17 +6,6 @@
 	import '@fontsource-variable/roboto-mono';
 
 	let { children } = $props();
-	let resizeTimer: any;
-
-	$effect(() => {
-		window.addEventListener('resize', () => {
-			document.body.classList.add('resize-animation-stopper');
-			clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(() => {
-				document.body.classList.remove('resize-animation-stopper');
-			}, 400);
-		});
-	});
 </script>
 
 <Navbar />
@@ -40,8 +29,8 @@
 	}
 
 	:global(body) {
-		font-family: 'Roboto Mono Variable', monospace;
-		min-height: 100vh;
+		font-family: 'Inter Variable', monospace;
+		min-height: 100dvh;
 		overflow-x: hidden;
 	}
 
@@ -60,24 +49,15 @@
 		box-sizing: border-box;
 	}
 
-	.resize-animation-stopper * {
-		animation: none !important;
-		transition: none !important;
+	:global(img) {
+		display: block;
+		max-width: 100%;
 	}
 
 	.content-wrapper {
 		background-color: var(--bg-rose-50);
 		padding-top: 4rem;
-		min-height: 100vh;
-		padding-bottom: 10rem;
-	}
-
-	.navigation-wrapper {
-		/* padding-top: 10rem; */
-		height: 4rem;
-		border-bottom: 0.13rem solid var(--bg-stone-900);
-		background-color: rgba(255, 255, 255, 0.85);
-		backdrop-filter: blur(1rem);
-		/* background-color: black; */
+		width: 100%;
+		min-height: 100dvh;
 	}
 </style>

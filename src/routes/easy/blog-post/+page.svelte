@@ -10,7 +10,7 @@
 		<img src={photo} alt="" />
 		<article>
 			<div class="title">
-				<p class="header">Sana</p>
+				<p class="header">Minatozaki Sana</p>
 				<p class="description">Singer from twice</p>
 			</div>
 			<p class="content">
@@ -58,16 +58,22 @@
 	}
 
 	.container {
+		height: 100%;
+		width: 100%;
 		padding-bottom: 2rem;
 		.card {
+			overflow: auto;
 			padding: 0.5rem;
 			margin-top: 1rem;
 			img {
 				border-radius: 1rem;
 			}
+			border-radius: 2rem;
 		}
 		article {
 			text-wrap: balance;
+			overflow: auto;
+			background-color: white;
 			overflow: auto;
 			.title {
 				margin-top: 1rem;
@@ -89,8 +95,7 @@
 			}
 		}
 	}
-
-	@media (width >= 1024px) {
+	@media (width > 820px) {
 		.container {
 			display: flex;
 			justify-content: center;
@@ -99,29 +104,36 @@
 			.card {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				max-width: 90%;
-				background-color: white;
-				padding: 0;
-				/* border: 0.5rem solid black; */
+				max-height: 90%;
 				overflow: auto;
-				aspect-ratio: 16 / 9;
-				gap: 2rem;
+				aspect-ratio: 16/9;
+				background-color: white;
 
-				/* width: 90%;
-			    aspect-ratio: 9 / 16; */
+				img {
+					grid-row-start: 1;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			article {
+				max-width: 100%;
+				overflow: auto;
+				padding: 2rem;
+			}
+		}
+	}
+
+	@media (width >= 1100px) {
+		.container {
+			.card {
+				max-width: 95%;
+				padding: 0;
+				overflow: auto;
 
 				img {
 					height: 100%;
-					object-fit: cover;
 					border-radius: 0;
 				}
-			}
-
-			article {
-				overflow: auto;
-				padding-right: 2rem;
-				padding-bottom: 2rem;
-				/* max-height: 100%; */
 			}
 		}
 	}

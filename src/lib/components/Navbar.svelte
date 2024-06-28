@@ -53,7 +53,7 @@
 
 		display: flex;
 		align-items: center;
-		background-color: rgba(255, 255, 255, 0.85);
+		background-color: rgba(255, 255, 255, 0.95);
 		border-bottom: 0.13rem solid var(--bg-stone-900);
 	}
 

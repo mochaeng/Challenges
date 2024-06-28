@@ -11,19 +11,19 @@ let items: ProjectCardItem[] = [
 		title: 'Basics',
 		description: 'Tipography and Colors',
 		url: '/easy/basics',
-		image: { src: path + '1.webp', alt: 'A print from the project' }
+		image: { src: '', alt: 'A print from the project' }
 	},
 	{
 		title: 'Error Page',
 		description: 'A custom 404 page',
 		url: '/easy/error-page',
-		image: { src: path + '2.webp', alt: 'A print from the project' }
+		image: { src: '', alt: 'A print from the project' }
 	},
 	{
-		title: 'Error Page',
-		description: 'A custom 404 page',
-		url: '/easy/error-page',
-		image: { src: path + '2.webp', alt: 'A print from the project' }
+		title: 'Blog Post',
+		description: 'A blog post card',
+		url: '/easy/blog-post',
+		image: { src: '', alt: 'A print from the project' }
 	}
 ];
 
