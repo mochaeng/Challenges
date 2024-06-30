@@ -1,13 +1,16 @@
 <script lang="ts">
-	const photos = Object.values(
-		import.meta.glob('$lib/assets/wallpapers/sana*', { eager: true, as: 'url' })
-	);
-	const photo = photos[0];
+	// const photos = Object.values(
+	// 	import.meta.glob('$lib/assets/wallpapers/sana*', { eager: true, as: 'url' })
+	// );
+	// const photo = photos[0];
+	const photo =
+		'https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tCZxH763PSh7gCN1_P-Aa6-kF2DPFmyVrAXsf5DPSsCnJPtXTDSR7Xl68QisvZo1r8oTMvd3yAe2KsfM7DJebL66vvnxrdAgIG8WwtYOP6_Cw5XKfLM4gSocjxZBaH3vT1ebzO=w919-h516-p-k-no-nu';
 </script>
 
 <div class="container">
 	<div class="card">
-		<img src={photo} alt="" />
+		<img alt="Mina from TWICE smiling and holding a camera" src={photo} />
+		<!-- <img src={photo} alt="" /> -->
 		<article>
 			<div class="title">
 				<p class="header">Minatozaki Sana</p>
@@ -68,8 +71,9 @@
 			img {
 				border-radius: 1rem;
 			}
-			border-radius: 2rem;
+			border-radius: 1rem;
 		}
+
 		article {
 			text-wrap: balance;
 			overflow: auto;
@@ -101,14 +105,16 @@
 			justify-content: center;
 			align-items: center;
 			background: linear-gradient(in lch -145deg, var(--color4), var(--color1));
+			height: 100dvh;
 			.card {
 				display: grid;
+				padding: 0;
 				grid-template-columns: 1fr 1fr;
-				max-height: 90%;
 				overflow: auto;
+				max-width: 1280px;
 				aspect-ratio: 16/9;
 				background-color: white;
-
+				box-shadow: 0 3px 10px rgb(0 0 0 / 0.6);
 				img {
 					grid-row-start: 1;
 					height: 100%;
@@ -119,21 +125,6 @@
 				max-width: 100%;
 				overflow: auto;
 				padding: 2rem;
-			}
-		}
-	}
-
-	@media (width >= 1100px) {
-		.container {
-			.card {
-				max-width: 95%;
-				padding: 0;
-				overflow: auto;
-
-				img {
-					height: 100%;
-					border-radius: 0;
-				}
 			}
 		}
 	}

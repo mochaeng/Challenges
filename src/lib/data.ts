@@ -5,25 +5,32 @@ export const projectPhotos = Object.values(
 import type { ProjectCardItem } from '../app';
 
 const path = '/src/lib/assets/projects/';
+const image = { src: '', alt: 'A print from the project' };
 
 let items: ProjectCardItem[] = [
 	{
 		title: 'Basics',
 		description: 'Tipography and Colors',
 		url: '/easy/basics',
-		image: { src: '', alt: 'A print from the project' }
+		image
 	},
 	{
 		title: 'Error Page',
 		description: 'A custom 404 page',
 		url: '/easy/error-page',
-		image: { src: '', alt: 'A print from the project' }
+		image
 	},
 	{
 		title: 'Blog Post',
 		description: 'A blog post card',
 		url: '/easy/blog-post',
-		image: { src: '', alt: 'A print from the project' }
+		image
+	},
+	{
+		title: 'Cart Item',
+		description: 'A cart item card',
+		url: '/easy/cart-item',
+		image
 	}
 ];
 

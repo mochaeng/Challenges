@@ -11,9 +11,9 @@
 <Navbar />
 
 <div class="content-wrapper">
-	<MaxWidthWrapper>
-		{@render children()}
-	</MaxWidthWrapper>
+	<!-- <MaxWidthWrapper> -->
+	{@render children()}
+	<!-- </MaxWidthWrapper> -->
 </div>
 
 <style>
@@ -55,7 +55,6 @@
 	}
 
 	.content-wrapper {
-		background-color: var(--bg-rose-50);
 		padding-top: 4rem;
 		width: 100%;
 		min-height: 100dvh;
