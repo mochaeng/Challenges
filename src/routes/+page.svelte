@@ -10,14 +10,12 @@
 <MaxWidthWrapper>
 	<section>
 		<h1>Fronted Challenges</h1>
-
 		<p>
 			A collection of some fronted challenges I solved on <a
 				href="https://icodethis.com/"
 				target="_blank">iCodeThis</a
 			>
 		</p>
-
 		<div class="cards">
 			<ul>
 				{#each Challenges.getItems() as challenge}
@@ -40,6 +38,11 @@
 	section {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+		p {
+			a {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	h1 {

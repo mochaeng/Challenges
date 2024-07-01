@@ -11,9 +11,7 @@
 <Navbar />
 
 <div class="content-wrapper">
-	<!-- <MaxWidthWrapper> -->
 	{@render children()}
-	<!-- </MaxWidthWrapper> -->
 </div>
 
 <style>
